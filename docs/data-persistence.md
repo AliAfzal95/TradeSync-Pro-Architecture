@@ -96,8 +96,6 @@ TradeSync Pro persists account configuration to JSON (accounts list, display tit
 - Accounts are saved and restored between application runs.
 - The accounts list must remain aligned with MT4/MT5 client lists via `accIndex` reindexing rules.
 
-> The exact file path for the accounts JSON store is intentionally omitted from this public repository. Recruiters can assume it is stored under `%AppData%\TradeSync Pro\...` as an application-managed configuration file.
-
 **When it is written**
 - When a user adds/edits/deletes an account.
 - Optionally on app shutdown (ensuring the latest state is stored).
