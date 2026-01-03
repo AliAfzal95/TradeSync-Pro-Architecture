@@ -28,8 +28,6 @@ Typical fields (conceptual):
 - broker connection target (server host/IP and port)
 - login identifier
 
-> If the production build stores credentials locally (passwords), they must be treated as secrets. In a public repository, you should never include real account exports or example files containing real credentials.
-
 ### 2.2 Symbol mappings (local JSON)
 Stored so symbol translations persist across app restarts.
 
@@ -114,29 +112,4 @@ To prevent unsafe concurrency:
 - shared client modifications are serialized via a coordinator gate
 - reconnect attempts are deduplicated per account
 
----
-
-## 6. Public repository hygiene (how to avoid leaking secrets)
-
-Recommended practices for the public docs repo:
-
-- Do not include:
-  - `.sln`, `.csproj`, `*.cs`, binaries, installers
-  - any `*.json` exports from a real environment
-  - log files that might contain account identifiers
-- Only include:
-  - diagrams
-  - redacted screenshots
-  - redacted example schemas (fake values only)
-
-### 6.1 Screenshot redaction checklist
-Before uploading screenshots:
-- blur/remove:
-  - account IDs/logins
-  - server IPs/domains/ports
-  - license keys
-  - session tokens
-  - personal or customer identifiers
-
----
 
